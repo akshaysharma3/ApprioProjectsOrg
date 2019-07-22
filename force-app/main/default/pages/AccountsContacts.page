@@ -1,0 +1,54 @@
+<apex:page standardController="Account" recordSetVar="accounts" tabstyle="account" sidebar="false" lightningStylesheets="true" >
+    <apex:pageBlock title="Account Contact Records" >
+        <apex:form >
+            <div align="right">
+                <apex:panelGrid cellpadding="5" cellspacing="5" columns="5" >
+                    <apex:commandButton value="|<"  action="{!first}" />
+                    <apex:commandButton value="<" action="{!previous}" />
+                    <apex:commandButton value=">" action="{!next}" />
+                    <apex:commandButton value=">|" action="{!last}" />
+                    <apex:panelGroup >
+                        <apex:outputText value="Records/Page"></apex:outputText>&nbsp;&nbsp;
+                        <apex:selectList value="{!PageSize}" size="1">
+                            <apex:selectOption itemValue="5" itemLabel="5"></apex:selectOption>
+                            <apex:selectOption itemValue="10" itemLabel="10"></apex:selectOption>
+                            <apex:selectOption itemValue="15" itemLabel="15"></apex:selectOption>
+                            <apex:selectOption itemValue="20" itemLabel="20"></apex:selectOption>
+                            <apex:selectOption itemValue="25" itemLabel="25"></apex:selectOption>
+                        </apex:selectList>&nbsp;&nbsp; 
+                        <apex:commandButton action="{!null}" value="Update Page Size"/>
+                    </apex:panelGroup>
+                </apex:panelGrid> 
+            </div>
+            <br/>
+            <div>
+                <apex:pageBlockTable value="{!accounts}" var="a" >
+                    <apex:variable var="rowNo" value="{!-1}"/>
+                    <apex:column headerValue="S.No">
+                        <apex:variable var="rowNo" value="{!rowNo+1}"/>
+                        {!rowNo}
+                    </apex:column>
+                    
+                    <apex:column headerValue="Account Name">
+                        <apex:outputField value="{!a.Name}" />
+                    </apex:column>
+                    <apex:column value="{!a.type}" />
+                    <apex:column value="{!a.billingstreet}"/>
+                    <apex:column value="{!a.billingCity}" />
+                    <apex:column value="{!a.billingCountry}" />
+                    <apex:column value="{!a.billingPostalCode}"/>
+                    <apex:column headerValue="Related Contacts">
+                        <table>
+                            <tr> <apex:repeat value="{!a.Contacts}" var="con">
+                                {!con.Name}<br/>
+                                </apex:repeat>
+                            </tr>
+                        </table>
+                    </apex:column>
+                    
+                </apex:pageBlockTable>
+            </div>
+            <br/>
+        </apex:form>
+    </apex:pageBlock>
+</apex:page>

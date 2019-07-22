@@ -1,0 +1,11 @@
+<apex:page standardController="Contact" lightningStylesheets="true" tabStyle="Contact">
+    <apex:pageBlock title="Contact Summary">
+        <apex:pageBlockSection >
+            <apex:outputField value="{!contact.FirstName}"/>
+            <apex:outputField value="{!contact.LastNAme}"/>
+            <apex:outputField value="{!contact.Account.name}"/>
+            <apex:outputField value="{!contact.Owner.Email}"/>
+        </apex:pageBlockSection>
+        
+    </apex:pageBlock>
+</apex:page>

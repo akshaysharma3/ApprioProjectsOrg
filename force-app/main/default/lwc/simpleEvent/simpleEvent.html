@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Custom Event" icon-name="standard:event">
+        <lightning-layout vertical-align="center" horizontal-align="center">
+            <lightning-layout-item padding="around-small">
+                        <template if:true={page}>
+                            Curent page no is :
+                            <lightning-formatted-number value={page}></lightning-formatted-number>
+                        </template>
+            </lightning-layout-item><br />
+            <lightning-layout-item padding="around-small">
+                <c-paginator onnext={handleNext} onprevious={handlePrevious}></c-paginator>
+            </lightning-layout-item>
+
+        </lightning-layout>
+
+    </lightning-card>
+</template>

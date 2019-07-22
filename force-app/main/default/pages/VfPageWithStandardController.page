@@ -1,0 +1,26 @@
+<apex:page standardController="Account" lightningStylesheets="true" recordSetVar="accts">
+    <apex:pageBlock title="Account Summary">
+        <apex:pageBlockSection >
+            <apex:pageBlockTable value="{!accts}" var="acc">
+                <apex:outputField value="{!acc.Name}"/>
+                <apex:outputField value="{!acc.Phone}"/>
+                <apex:outputField value="{!acc.Industry}"/>
+                <apex:outputField value="{!acc.AnnualRevenue}"/>
+                
+            <!--<apex:pageBlockSection title="Opportunities">
+                <apex:pageBlockTable value="{!account.opportunities}" var="opp">
+                    <apex:column value="{!opp.Account.Name}"/>
+                    <apex:column value="{!opp.Amount}"/>
+                    <apex:column value="{!opp.LeadSource}"/>
+                    <apex:column value="{!opp.StageName}"/>
+                </apex:pageBlockTable>
+                
+                 
+            </apex:pageBlockSection>-->
+       
+        </apex:pageBlockTable>
+        
+       </apex:pageBlockSection> 
+        
+    </apex:pageBlock>
+</apex:page>

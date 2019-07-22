@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title={heading} icon-name="custom:custom9">
+        <lightning-layout vertical-align="stretch" multiple-rows="true">
+        <lightning-layout-item padding="around-small" size="3" flexibility="auto">
+            <lightning-button label="Home Page" onclick={navigateToObjectHome}>
+            </lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" size="3" flexibility="auto">
+                <lightning-button label="Record Page" onclick={navigateToRecord}>
+                </lightning-button>
+        </lightning-layout-item>
+
+        <lightning-layout-item padding="around-small" size="3" flexibility="auto">
+            <lightning-button label="List" onclick={navigateToList}>
+            </lightning-button>
+        </lightning-layout-item>
+        
+        <lightning-layout-item padding="around-small" size="3" flexibility="auto">
+            <lightning-button label="New Account" onclick={avigateToNewRecordPage}>
+            </lightning-button>
+        </lightning-layout-item>
+        
+        </lightning-layout>
+    </lightning-card>
+</template>

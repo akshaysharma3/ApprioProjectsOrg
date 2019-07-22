@@ -1,0 +1,29 @@
+<apex:page standardController="Account">
+    <apex:pageBlock title="Edit Account">
+        <apex:form >
+            <table>
+                <tr>
+                    <th>
+                        Account Name
+                    </th>
+                    <th>
+                        Phone
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        <apex:inputField value="{!account.Name}"/>
+                    </td>
+                    <td>
+                        <apex:inputField value="{!account.Phone}"/>
+                    </td>
+                </tr>
+            </table>
+            
+            
+            <apex:commandButton value="save" action="{!save}"/>
+        </apex:form>
+        
+        
+    </apex:pageBlock>
+</apex:page>

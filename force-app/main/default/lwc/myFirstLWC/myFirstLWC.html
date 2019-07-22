@@ -1,0 +1,23 @@
+<template>
+<lightning-card title="My First Lightning Web Component" icon-name="custom:custom14">
+    <lightning-layout vertical-align="center">
+        <lightning-layout-item title="Name" padding="around-small">
+            <lightning-formatted-text  value={Name}></lightning-formatted-text>
+        </lightning-layout-item>
+        <lightning-layout-item title="Title" padding="around-small">
+                <lightning-formatted-text value={Title}></lightning-formatted-text>
+            </lightning-layout-item>
+            <lightning-layout-item title="Phone" padding="around-small">
+                    <lightning-formatted-phone  value={Phone}></lightning-formatted-phone>
+                </lightning-layout-item>
+                <lightning-layout-item  title="Email" padding="around-small">
+                        <lightning-formatted-email  value={Email}></lightning-formatted-email>
+                    </lightning-layout-item>
+    </lightning-layout>
+    <lightning-layout vertical-align="center">
+        <lightning-layout-item padding="around-small">
+        <lightning-button label="Change Name" onclick={handleClick} variant="brand"></lightning-button>
+    </lightning-layout-item>
+    </lightning-layout>
+</lightning-card>
+</template>

@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/accountTile": [
+                "accountTile/accountTile.js"
+            ],
+            "c/contactListDemo": [
+                "contactListDemo/contactListDemo.js"
+            ],
+            "c/helloWorld": [
+                "helloWorld/helloWorld.js"
+            ],
+            "c/mapDemo": [
+                "mapDemo/mapDemo.js"
+            ],
+            "c/myFirstLWC": [
+                "myFirstLWC/myFirstLWC.js"
+            ],
+            "c/pageReference": [
+                "pageReference/pageReference.js"
+            ],
+            "c/paginator": [
+                "paginator/paginator.js"
+            ],
+            "c/simpleEvent": [
+                "simpleEvent/simpleEvent.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    }
+}

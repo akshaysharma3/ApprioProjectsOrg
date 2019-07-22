@@ -1,0 +1,19 @@
+<apex:page >
+    <h1>
+        Congratulations
+    </h1>
+     <p>
+         {!$User.FirstName}
+    </p>
+    <p>
+        Date After The fortnight is {!Today()+1}
+    </p>
+    <p>
+    	{!If(Day(Today()) < 10,'Before The 10th','After 10th')}
+    </p>
+    
+    <p>
+        Trying to use not in Formula.<br/>
+        {!IF(Not($User.IsActive),$User.FirstName,'Inactive')}
+    </p>
+</apex:page>

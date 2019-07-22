@@ -1,0 +1,21 @@
+<template>
+    <lightning-card title={account.Name} icon-name="standard:account">
+        <!--<lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <p>
+                    <lightning-formatted-phone value={account.Phone}></lightning-formatted-phone>
+                </p>
+                <p>
+                    <lightning-formatted-text value={account.Industry}></lightning-formatted-text>
+                </p>
+                
+            </lightning-layout-item>
+
+        </lightning-layout>-->
+        <lightning-layout vertical-align="center">
+            <lightning-layout-item padding="around-small">
+                <a href="javascript:void(0);" onclick={handleSelect}>{account.Name}</a>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
